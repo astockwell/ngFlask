@@ -4,29 +4,20 @@ module.exports = (grunt) ->
 		sass:
 			app:
 				files:
-					'app/css/screen.css': 'sass/screen.scss'
-					'app/css/ie.css': 'sass/ie.scss'
+					'app/css/screen.css': ['sass/screen.scss']
+					'app/css/ie.css': ['sass/ie.scss']
 		coffee:
 			compile:
 				files:
-					'app/js/script.js': 'coffee/*.coffee'
+					'app/js/script.js': ['coffee/*.coffee']
 		jshint:
 			options:
 				smarttabs: true
-			all: [
-				# 'app/js/*.js'
-				# '!app/js/*.min.js'
-				'app/js/script.js'
-			]
-			# gruntfile: [
-			# 	'Gruntfile.js'
-			# ]
+			all: ['app/js/script.js']
 		uglify:
 			app:
 				files:
-					'app/js/script.min.js': [
-						'app/js/script.js'
-					]
+					'app/js/script.min.js': ['app/js/script.js']
 			libs:
 				files:
 					'app/js/libs.min.js': [
@@ -56,11 +47,6 @@ module.exports = (grunt) ->
 				files: ['app/**/*.html']
 				options:
 					livereload: true
-			# gruntfile:
-			# 	files: 'Gruntfile.coffee'
-			# 	tasks: ['jshint:gruntfile']
-			# options:
-			# 	livereload: true
 		connect:
 			server:
 				options:
