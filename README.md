@@ -11,3 +11,9 @@ Additional support for bower, grunt, coffeescript, sass and live-reload.
 1. Clone the repo
 2. `cd` into repo dir and run `make`
 3. Run `grunt` to compile assets, run grunt watch (with live-reload) and start a webserver @ `http://localhost:9111`
+
+## Requires
+
+- Node coffeescript support (for Gruntfile.coffee use)
+- Node/npm
+- Ruby
